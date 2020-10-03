@@ -13,15 +13,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/junioresc/social-network-api/issues"
   },
-  "homepage": "https://github.com/junioresc/social-network-api#readme",
-  "dependencies": {
-    "bcrypt": "^5.0.0",
-    "express": "^4.17.1",
-    "moment": "^2.29.0",
-    "mongoose": "^5.10.7"
-  }
+  "homepage": "https://github.com/junioresc/social-network-api#readme"
 }
