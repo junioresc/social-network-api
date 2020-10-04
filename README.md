@@ -1,7 +1,6 @@
 # social-network-api
 
 [![License](https://img.shields.io/badge/Licensed%20by-MIT%20License-blue)](LICENSE.txt)
-[![Languages](https://img.shields.io/github/languages/top/junioresc/social-network-api)]
 
 ## Description
 
@@ -26,7 +25,11 @@ After you install the required node modules, in the terminal type in to start th
 
 https://drive.google.com/file/d/1EuFu1IRNWe_vhlEu1Ywo8FoJBwmB6APJ/view
 
-[![IMAGE ALT TEXT](https://cdn.discordapp.com/attachments/733057631802884231/762429905882447942/unknown.png)]
+## Screenshot
+
+Below is what a request for all of the users would look like if they had friends, thoughts and reactions
+
+![IMAGE ALT TEXT](https://cdn.discordapp.com/attachments/733057631802884231/762429905882447942/unknown.png)
 
 ## License
 
