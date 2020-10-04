@@ -1,4 +1,3 @@
-const moment = require(`moment`);
 const { Schema, model } = require(`mongoose`);
 
 const UserSchema = new Schema(
@@ -38,7 +37,7 @@ const UserSchema = new Schema(
 );
 
 UserSchema.virtual(`friendCount`).get(function() {
-    return this.friends.reduce((total, friend) => total + friend + 1, 0)
+    return this.friends.length;
 });
 
 const User = model(`User`, UserSchema);
