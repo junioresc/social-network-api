@@ -34,7 +34,7 @@ const thoughtController = {
             .then(({ _id }) => {
                 return User.findOneAndUpdate(
                     { _id: params.userId },
-                    { $push: { comments: _id } },
+                    { $push: { thoughts: _id } },
                     { new: true }
                 );
             })
@@ -45,7 +45,7 @@ const thoughtController = {
                 }
                 res.json(dbThoughtData);
             })
-            .catch(err => res.json(err));
+            .catch(err => res.status(500).json(err));
     },
 
     addReaction({ params, body}, res) {
@@ -61,7 +61,7 @@ const thoughtController = {
                 }
                 res.json(dbThoughtData);
             })
-            .catch(err => res.json(err));
+            .catch(err => res.status(500).json(err));
     },
 
     updateThought({ params, body }, res) {
@@ -73,7 +73,7 @@ const thoughtController = {
                 }
                 res.json(dbThoughtData);
             })
-            .catch(err => res.status(400).json(err));
+            .catch(err => res.status(500).json(err));
     },
 
     removeReaction({ params }, res) {
@@ -83,7 +83,7 @@ const thoughtController = {
             { new: true }
         )
             .then(dbThoughtData => res.json(dbThoughtData))
-            .catch(err => res.json(err)); 
+            .catch(err => res.status(500).json(err)); 
     },
 
     removeThought({ params }, res) {
@@ -104,7 +104,7 @@ const thoughtController = {
                 }
                 res.json(dbUserData);
             })
-            .catch(err => res.json(err));
+            .catch(err => res.status(500).json(err));
     }
 };
 

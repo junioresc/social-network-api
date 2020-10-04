@@ -44,7 +44,7 @@ const userController = {
                 }
                 res.json(dbUserData);
             })
-            .catch(err => res.json(err));
+            .catch(err => res.status(500).json(err));
     },
 
     updateUser({ params, body }, res) {
@@ -56,17 +56,17 @@ const userController = {
                 }
                 res.json(dbUserData);
             })
-            .catch(err => res.status(400).json(err));
+            .catch(err => res.status(500).json(err));
     },
 
     removeFriend({ params }, res) {
         User.findOneAndUpdate(
-            { _id: params.friendId },
+            { _id: params.userId },
             { $pull: { friends: params.friendId } },
             { new: true }
         )
             .then(dbUserData => res.json(dbUserData))
-            .catch(err => res.json(err)); 
+            .catch(err => res.status(500).json(err)); 
     },
 
     deleteUser({ params }, res) {
@@ -78,7 +78,7 @@ const userController = {
                 }
                 res.json(dbUserData);
             })
-            .catch(err => res.json(err));
+            .catch(err => res.status(500).json(err));
     }
 };
 

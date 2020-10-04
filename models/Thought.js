@@ -10,7 +10,8 @@ const ReactionSchema = new Schema(
         reactionBody: {
             type: String,
             required: `You must include something in the comment!`,
-            maxlength: 280
+            maxlength: 280,
+            trim: true
         },
         username: {
             type: String,
@@ -36,7 +37,8 @@ const ThoughtSchema =  new Schema(
             type: String,
             required: `You need to include something in the thought!`,
             minlength: 1,
-            maxlength: 280
+            maxlength: 280,
+            trim: true
         },
         createdAt: {
             type: Date,
@@ -53,7 +55,8 @@ const ThoughtSchema =  new Schema(
         toJSON: {
             virtuals: true,
             getters: true
-        }
+        },
+        id: false
     }
 );
 
